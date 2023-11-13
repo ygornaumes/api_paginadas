@@ -5,13 +5,11 @@ import pandas as pd
 df_final = pd.DataFrame()
 
 pagina = 1
-registros_por_pagina = 100
+
 
 while True:
     # Construindo a URL da API
     url = f" https://swapi.dev/api/people/?page={pagina}"
-
-    
 
     # Fazendo a requisição
     response = requests.get(url)
@@ -37,3 +35,5 @@ while True:
 
 # Exibindo o DataFrame final
 print(df_final)
+
+df_final.to_excel("exemplo_starwars.xlsx", index=False)

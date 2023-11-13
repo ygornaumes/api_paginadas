@@ -35,3 +35,6 @@ while True:
 
 # Exibindo o DataFrame final
 print(df_final)
+
+
+df_final.to_excel("reservas_condicoes.xlsx", index=False)
